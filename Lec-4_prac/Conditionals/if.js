@@ -58,3 +58,91 @@ if(arr.length == 0){
 else{
     console.log("Array is NOT empty");
 }
+
+// ============================================================================================
+/* Write a simple JavaScript program to check whether the person is eligible to drive or not.
+
+Create 2 variables to store a person's Age and the Country which he's living in
+
+If the person's age is greater than or equal to 16 and country is USA , print "You're eligible to drive !!"
+
+else print "You're not eligible to drive !!" */
+
+let personAge = 18
+let personCountry = "usa"
+
+if(personAge >= 16 && personCountry.toUpperCase() === 'USA'){
+    console.log("You're eligible to drive !!");
+}
+else{
+    console.log("You're not eligible to drive !!");
+}
+// else if example
+
+/* Imagine a home automation tool which automatically turns on Heater, Fan or Air Conditioner based on sensing the current temperature of the house.
+
+The conditions to be followed are:
+
+If current temperature is below 18°C, then "Turn the Heater on"
+
+If current temperature is between 18°C and 25°C (inclusive, then "Turn the Fan on"
+
+If current temperature is above 25°C, then "Turn the AC on" */
+
+let currentTempInDegCel = 17
+
+if (currentTempInDegCel < 18){
+    console.log("Turn the Heater on");
+}
+else if(currentTempInDegCel >= 18 && currentTempInDegCel <= 25){
+    console.log("Turn the Fan on");
+}
+else if(currentTempInDegCel > 25){
+    console.log("Turn the AC on");
+}
+
+let health = 'sick'
+if(health.toLowerCase() === 'sick'){
+    console.log('Go to doctor');
+}
+else{
+    console.log("Enjoy at home");
+}
+
+console.log((health.toLowerCase() === 'sick') ? "Go to doctor" : "Enjoy at home");
+
+let Daynum = parseFloat(prompt("Enter a number"))
+console.log(Daynum);
+
+
+switch(Daynum){
+    case 1:
+        console.log("It's Sunday");
+        break;
+    case 2:
+        console.log("It's Monday");
+        break;
+    case 3:
+        console.log("It's Tuesday");
+        break;
+    case 4:
+        console.log("It's Wednesday");
+        break;
+    case 5:
+        console.log("It's Thursday");
+        break;
+    case 6:
+        console.log("It's Friday");
+        break;
+    case 7:
+        console.log("It's Saturday");
+        break;
+    default:
+        console.log("Invalid input");    
+}
+
+let Stringnum = "69.99"
+console.log(Stringnum);
+console.log(typeof Stringnum);
+console.log(parseFloat(Stringnum));
+console.log(typeof Number(Stringnum));
