@@ -142,7 +142,7 @@ console.log(isLondonInList);
 cityBucketList.reverse()
 console.log(cityBucketList);
 
-// also refer slice() and splice()
+// also refer slice() and splice(), unshift(param), shift(), indexOf(), .join(), 
 
 // ============================================================================================================
 
@@ -151,3 +151,21 @@ console.log(cars);
 
 const cars2 = new Array('Volvo','BMW','Audi','Hyndai')
 console.log(cars2);
+
+const sports = ['football','cricket','basketball','golf','rugby']
+console.log(sports[3]);
+console.log(sports[1]);
+const groceries = []
+groceries[0] = "Egg"
+groceries[1] = "Milk"
+groceries[2] = "Sugar"
+groceries[3] = "bread"
+console.log(groceries);
+
+
+const stationary = ['Pencil','Pen','Eraser','Exam Pad']
+console.log(stationary);
+
+stationary[2] = 'Sharpner'
+console.log(stationary);
+
