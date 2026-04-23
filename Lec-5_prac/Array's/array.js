@@ -143,3 +143,11 @@ cityBucketList.reverse()
 console.log(cityBucketList);
 
 // also refer slice() and splice()
+
+// ============================================================================================================
+
+const cars = ['Volvo','BMW','Audi','Hyndai']
+console.log(cars);
+
+const cars2 = new Array('Volvo','BMW','Audi','Hyndai')
+console.log(cars2);
