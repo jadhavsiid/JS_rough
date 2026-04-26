@@ -142,7 +142,7 @@ console.log(isLondonInList);
 cityBucketList.reverse()
 console.log(cityBucketList);
 
-// also refer slice() and splice(), unshift(param), shift(), indexOf(), .join(), 
+// also refer slice() and splice(), unshift(param), shift(), indexOf(), .join(), Spread operators, .flat(), .from(), .of(),.isArray()
 
 // ============================================================================================================
 
@@ -169,3 +169,45 @@ console.log(stationary);
 stationary[2] = 'Sharpner'
 console.log(stationary);
 
+
+const kitchenEquip = ['knife','spatula','stirrer','mixer']
+console.log(kitchenEquip.length);
+
+
+const fruits = ['kiwi','strawberry','watermelon']
+console.log(fruits);
+fruits.push('muskmelon')
+console.log(fruits);
+
+const americanCars = ['Ford','Tesla','GM']
+const germanCars = ['Volkswagon','BMV','Audi']
+
+// americanCars.push(germanCars)
+// console.log(americanCars);
+
+// const mergedArrays = americanCars.concat(germanCars)
+// console.log(mergedArrays);
+
+const mergedArrays = [...americanCars,...germanCars]
+console.log(mergedArrays);
+
+
+const domesticAnimals = ['dog','cat']
+const farmAnimals = ['cow','pig','chickens','goat']
+
+const animals = ['lion','zebra', ...domesticAnimals, 'cheetah','panther', ...farmAnimals]
+console.log(animals);
+animals.pop()
+console.log(animals);
+
+let string1 = 'Engineer'
+console.log(...string1);
+
+
+const firstArr = ['Pizza','Pineapple','Pumpkin']
+const secondArr = firstArr
+
+secondArr[1] = 'Prawns'
+
+console.log(secondArr);
+console.log(firstArr);
