@@ -146,10 +146,10 @@ console.log(cityBucketList);
 
 // ============================================================================================================
 
-const cars = ['Volvo','BMW','Audi','Hyndai']
+const cars = ['Volvo','BMW','Audi','Hyundai']
 console.log(cars);
 
-const cars2 = new Array('Volvo','BMW','Audi','Hyndai')
+const cars2 = new Array('Volvo','BMW','Audi','Hyundai')
 console.log(cars2);
 
 const sports = ['football','cricket','basketball','golf','rugby']
@@ -166,7 +166,7 @@ console.log(groceries);
 const stationary = ['Pencil','Pen','Eraser','Exam Pad']
 console.log(stationary);
 
-stationary[2] = 'Sharpner'
+stationary[2] = 'Sharpener'
 console.log(stationary);
 
 
@@ -180,7 +180,7 @@ fruits.push('muskmelon')
 console.log(fruits);
 
 const americanCars = ['Ford','Tesla','GM']
-const germanCars = ['Volkswagon','BMV','Audi']
+const germanCars = ['Volkswagen','BMV','Audi']
 
 // americanCars.push(germanCars)
 // console.log(americanCars);
