@@ -144,7 +144,7 @@ console.log(cityBucketList);
 
 // also refer slice() and splice(), unshift(param), shift(), indexOf(), .join(), 
 
-// ============================================================================================================
+// ===========================================================
 
 const cars = ['Volvo','BMW','Audi','Hyndai']
 console.log(cars);
