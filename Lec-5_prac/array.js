@@ -1,4 +1,3 @@
-<<<<<<< HEAD:Lec-5_prac/Array's/array.js
 "use strict"
 document.write('Array Challenges in JS')
 
@@ -170,7 +169,6 @@ console.log(stationary);
 stationary[2] = 'Sharpner'
 console.log(stationary);
 
-=======
 "use strict"
 document.write('Array Challenges in JS')
 
@@ -384,4 +382,3 @@ secondArr[1] = 'Prawns'
 
 console.log(secondArr);
 console.log(firstArr);
->>>>>>> e419e987b180328dbe75b819ac2fa575fd0a2d96:Lec-5_prac/array.js
