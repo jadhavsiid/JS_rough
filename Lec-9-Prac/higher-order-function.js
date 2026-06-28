@@ -2,8 +2,20 @@
 
 const birthYear = (byear) => byear
 
-function ageAfterTenYrs(func, cYear = 2026){
-    return `Your current age is : ${cYear - func}`
+function currentAge(func, yearVal, cYear = 2026){
+    return `Your current age is : ${cYear - func(yearVal)}`
 }
 
-let ageRes = ageAfterTenYrs(birthYear)
+let ageRes = currentAge(birthYear,2001)
+console.log(ageRes);
+
+// another higher order eg
+const greet = () => `hello world`
+
+function offerGreet(func){
+
+    let funcRes = func()
+    console.log(funcRes);
+}
+
+offerGreet(greet)
