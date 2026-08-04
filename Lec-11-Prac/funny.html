@@ -24,11 +24,11 @@
 
     // insertBefore()
     let listItem = document.createElement('li')
-    let coffeeBeans = document.createTextNode('Coffee Beans')
-    listItem.appendChild(coffeeBeans)
+    let coffee = document.createTextNode('Coffee')
+    listItem.appendChild(coffee)
     console.log(listItem);
 
-    let list = document.querySelector('li:last-child')
+    let list = document.querySelector('li:nth-child(2)')
     console.log(list);
 
     let ul = document.querySelector('ul')
