@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Continuation</title>
+</head>
+<body>
+    <div class="parent">
+        <div class="day">Monday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">Wednesday</div>
+        <div class="day">Thursday</div>
+    </div>
+</body>
+<script>
+    const parent = document.querySelector('.parent')
+    // console.log(parent);
+
+    /* .children property */
+
+    // console.log(parent.children);
+    // console.log(parent.children[0]);
+    // console.log(parent.children[0].innerHTML);
+
+    // for (const item of parent.children) {
+    //     console.log(item.innerHTML);
+    // }
+
+    // parent.children[1].style.backgroundColor = 'black'
+    // parent.children[1].style.color = 'yellow'
+
+    /* firstElementChild and lastElementChild */
+
+    // console.log(parent.firstElementChild.innerHTML);
+    // console.log(parent.lastElementChild.innerHTML);
+
+    /* parentElement and nextElementSibling */
+
+    // const dayOne = document.querySelector('.day')
+    // console.log(dayOne);
+    // console.log(dayOne.parentElement);
+    // console.log(dayOne.nextElementSibling);
+
+    /* childNodes */
+    // console.log("Nodes:", parent.childNodes);
+
+    /* createElement and createTextNode */
+
+    const h1 = document.createElement('h1')
+    console.log(h1);
+    h1.className = 'main-head'
+    h1.id = 'heading'
+    h1.setAttribute("title","title-heading")
+    h1.style.color = 'red'
+    // h1.innerHTML = 'hello'
+    const addText = document.createTextNode("Hello")
+    /* appendChild */
+    h1.appendChild(addText)
+
+    document.body.appendChild(h1)
+
+</script>
+</html>

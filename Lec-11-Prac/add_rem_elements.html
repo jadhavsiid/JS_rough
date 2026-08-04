@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add or Remove DOM Elements</title>
+</head>
+<body>
+    <ul class="language">
+        <li>JavaScript</li>
+    </ul>
+</body>
+<script>
+    // Unoptimised way to add elements
+    const addLanguage = (langName) =>{
+        const li = document.createElement('li');
+        li.innerHTML = langName
+        document.querySelector('.language').appendChild(li)
+    }
+
+    addLanguage('React')
+    addLanguage('Angular')
+
+    // Optimised way to add elements
+    // appendChild() & createTextNode()
+
+    const addOpLanguage = (langName) =>{
+        const li = document.createElement('li')
+        li.appendChild(document.createTextNode(langName))
+        document.querySelector('.language').appendChild(li)
+    }
+
+    addOpLanguage('NodeJs')
+    addOpLanguage('MongoDB')
+
+    // Edit - replaceWith()
+    const secondLang = document.querySelector("li:nth-child(2)")
+    // console.log(secondLang);
+    const newLi = document.createElement('li')
+    newLi.textContent = "Go lang"
+    secondLang.replaceWith(newLi)
+
+
+    // edit
+    const firstLang = document.querySelector('li:first-child')
+    firstLang.outerHTML = '<li> Duck duck go </li>'
+    console.log(firstLang);
+
+    // remove()
+
+    const lastLang = document.querySelector('li:last-child')
+    lastLang.remove()
+
+</script>
+</html>

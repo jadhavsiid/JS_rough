@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funny</title>
+</head>
+<body>
+    <!-- <h1>Hello</h1> -->
+
+    <ul>
+        <li>Egg</li>
+        <li>Milk</li>
+        <li>Bread</li>
+    </ul>
+</body>
+<script>
+    // Adding DOM Elements into HTML
+    const heading1 = document.createElement('h1')
+    console.log(heading1);
+    const h1TextNode = document.createTextNode('Hello world')
+    heading1.appendChild(h1TextNode)
+    document.body.appendChild(heading1)
+
+    // insertBefore()
+    let listItem = document.createElement('li')
+    let coffeeBeans = document.createTextNode('Coffee Beans')
+    listItem.appendChild(coffeeBeans)
+    console.log(listItem);
+
+    let list = document.querySelector('li:last-child')
+    console.log(list);
+
+    let ul = document.querySelector('ul')
+
+    ul.insertBefore(listItem,list)
+
+    
+</script>
+</html>
