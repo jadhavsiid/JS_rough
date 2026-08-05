@@ -26,15 +26,32 @@
     let listItem = document.createElement('li')
     let coffee = document.createTextNode('Coffee')
     listItem.appendChild(coffee)
-    console.log(listItem);
+    // console.log(listItem);
 
     let list = document.querySelector('li:nth-child(2)')
-    console.log(list);
+    // console.log(list);
 
     let ul = document.querySelector('ul')
 
     ul.insertBefore(listItem,list)
 
+
+    // replaceWith()
+
+    let itemTobeReplaced = document.querySelector('li:last-child')
+    console.log(itemTobeReplaced);
+
+    let replacingElement = document.createElement('li')
+    replacingElement.textContent = 'Chicken'
+
+    itemTobeReplaced.replaceWith(replacingElement)
+
+    // remove()
+
+    let itemToBeRemoved = document.querySelector('li:nth-child(3)')
+    console.log(itemToBeRemoved);
+
+    itemToBeRemoved.remove()
     
 </script>
 </html>
