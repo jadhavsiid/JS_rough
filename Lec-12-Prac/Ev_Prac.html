@@ -21,12 +21,28 @@
 </style>
 <body>
     <h1 id="demo">Click the button below to generate current date and time</h1>
-    <button onclick="displayDate()">Click Me</button>
+    <button>Click Me</button>
 </body>
 <script>
-    const displayDate = () =>{
-        let headingElement1 = document.getElementById('demo')
+    // const displayDate = () =>{
+    //     let headingElement1 = document.getElementById('demo')
+    //     headingElement1.innerText = Date()
+    // }
+
+
+    let headingElement1 = document.getElementById('demo')
+
+    document.querySelector('button').addEventListener("click",() =>{
         headingElement1.innerText = Date()
-    }
+    })
+
+    let button = document.querySelector('button')
+    
+    document.querySelector('button').addEventListener('mouseenter',() =>{
+        button.style.backgroundColor = 'Red'
+    })
+    
+
+
 </script>
 </html>
