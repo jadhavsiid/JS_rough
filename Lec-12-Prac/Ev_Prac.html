@@ -1,173 +1,208 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Events Prac</title>
-</head>
-<style>
-    #btn{
-        padding: 0.8rem;
-       font-size: 1rem;
-       border: none;
-       border-radius: 20px;
-       background-color: black;
-       color: white;
+  </head>
+  <style>
+    #btn {
+      padding: 0.8rem;
+      font-size: 1rem;
+      border: none;
+      border-radius: 20px;
+      background-color: black;
+      color: white;
     }
-    button:hover{
-        cursor: pointer;
-        font-weight: bold;
+    button:hover {
+      cursor: pointer;
+      font-weight: bold;
     }
-</style>
-<body>
+  </style>
+  <body>
     <h1 id="demo">Click the button below to generate current date and time</h1>
     <!-- <button>Click Me</button> -->
 
     <!-- Event Propagation and Bubbling -->
-     <div id="grandparent">
-        <div id="parent">
-            <button id="child-btn">Click it</button>
-        </div>
-     </div>
+    <div id="grandparent">
+      <div id="parent">
+        <button id="child-btn">Click it</button>
+      </div>
+    </div>
 
     <!-- JavaScript Events -->
 
     <!-- click -->
     <button id="btn">Click Now</button>
-    <br>
-    <br>
-    <br>
+    <br />
+    <br />
+    <br />
     <!-- dblclick -->
-     <div id="box">Double click here</div>
-    <br>
-    <br>
-    <br>
-     <!-- mousedown and mouseup -->
+    <div id="box">Double click here</div>
+    <br />
+    <br />
+    <br />
+    <!-- mousedown and mouseup -->
     <div id="area">Press Down Here</div>
-    <br>
-    <br>
-    <br>
+    <br />
+    <br />
+    <br />
     <!-- mousemove -->
-     <div id="pad">Move your mouse here</div>
-    <br>
-    <br>
-    <br>
-     <!-- mouseenter and mouseleave -->
-      <div id="card-parent" style="border: 1px solid black; width: 12rem; padding: 3rem">
-              <div id="card">Bring your mouse here</div>
-      </div>
-</body>
-<script>
+    <div id="pad">Move your mouse here</div>
+    <br />
+    <br />
+    <br />
+    <!-- mouseenter and mouseleave -->
+    <div
+      id="card-parent"
+      style="border: 1px solid black; width: 12rem; padding: 3rem"
+    >
+      <div id="card">Bring your mouse here</div>
+    </div>
+    <!-- Wheel -->
+    <div id="scrollzone" style="height: 100px; overflow: auto">
+      Scroll inside me
+    </div>
+    <!-- keydown -->
+    <label for="demo">Press Any Key (You're out if you pressed enter)</label>
+    <input type="text" name="demo" id="demo" />
+  </body>
+  <script>
     // const displayDate = () =>{
     //     let headingElement1 = document.getElementById('demo')
     //     headingElement1.innerText = Date()
     // }
 
-
-    let headingElement1 = document.getElementById('demo')
+    let headingElement1 = document.getElementById("demo");
 
     // document.querySelector('button').addEventListener("click",() =>{
     //     headingElement1.innerText = Date()
     // })
 
     // let button = document.querySelector('button')
-    
+
     // document.querySelector('button').addEventListener('mouseenter',() =>{
     //     button.style.backgroundColor = 'Red'
     // })
 
     // Event Propagation and Bubbling
 
-    let grandparent = document.getElementById('grandparent')
-    grandparent.style.border = '1px solid black'
-    grandparent.style.width = '10rem'
-    grandparent.style.padding = '1rem'
+    let grandparent = document.getElementById("grandparent");
+    grandparent.style.border = "1px solid black";
+    grandparent.style.width = "10rem";
+    grandparent.style.padding = "1rem";
 
-    let parent = document.getElementById('parent')
-    parent.style.border = '1px solid black'
-    parent.style.width = '8rem'
-    parent.style.padding = '1rem'
+    let parent = document.getElementById("parent");
+    parent.style.border = "1px solid black";
+    parent.style.width = "8rem";
+    parent.style.padding = "1rem";
 
-    let childBtn = document.getElementById('child-btn')
-    childBtn.style.backgroundColor = 'black'
-    childBtn.style.color = 'white'
-    childBtn.style.border = 'none' 
-    childBtn.style.borderRadius = '10px' 
+    let childBtn = document.getElementById("child-btn");
+    childBtn.style.backgroundColor = "black";
+    childBtn.style.color = "white";
+    childBtn.style.border = "none";
+    childBtn.style.borderRadius = "10px";
 
-    grandparent.addEventListener('click', ()=>{
-        console.log('grandparent clicked');
-    })
+    grandparent.addEventListener("click", () => {
+      console.log("grandparent clicked");
+    });
 
-    parent.addEventListener('click', ()=>{
-        console.log('parent clicked');
-    })
+    parent.addEventListener("click", () => {
+      console.log("parent clicked");
+    });
 
-    childBtn.addEventListener('click', ()=>{
-        console.log('childBtn clicked');
-    },)
+    childBtn.addEventListener("click", () => {
+      console.log("childBtn clicked");
+    });
 
-    
-    
     // JavaScript Mouse Events
 
     // click
 
-    let clickNowBtn = document.getElementById('btn')
-    
-    clickNowBtn.addEventListener('click', function(e){
-        clickNowBtn.innerText = 'Button Clicked'
-    })
+    let clickNowBtn = document.getElementById("btn");
+
+    clickNowBtn.addEventListener("click", function (e) {
+      clickNowBtn.innerText = "Button Clicked";
+    });
 
     // dblclick
 
-    let box = document.getElementById('box')
+    let box = document.getElementById("box");
 
-    box.style.border = '1px solid black'
-    box.style.display = 'inline'
-    box.style.padding = '1rem'
+    box.style.border = "1px solid black";
+    box.style.display = "inline";
+    box.style.padding = "1rem";
 
-
-    box.addEventListener('dblclick',()=>{
-        box.innerHTML = "Event triggered"
-    })
+    box.addEventListener("dblclick", () => {
+      box.innerHTML = "Event triggered";
+    });
 
     // mousedown and mouseup
 
-    let area = document.getElementById('area')
-    area.style.border = '1px solid black'
-    area.style.display = 'inline'
-    area.style.padding = '1rem'
+    let area = document.getElementById("area");
+    area.style.border = "1px solid black";
+    area.style.display = "inline";
+    area.style.padding = "1rem";
 
-    area.addEventListener('mousedown',()=>{
-        area.innerHTML = 'Event triggered'
-    })
-    area.addEventListener('mouseup',()=>{
-        area.innerHTML = 'Back to normal'
-    })
+    area.addEventListener("mousedown", () => {
+      area.innerHTML = "Event triggered";
+    });
+    area.addEventListener("mouseup", () => {
+      area.innerHTML = "Back to normal";
+    });
 
     // mousemove
 
-    let pad = document.getElementById('pad')
-    pad.style.border = '1px solid black'
-    pad.style.width = '10rem'
-    pad.style.padding = '1rem'
-    pad.addEventListener('mousemove', (e)=>{
-        pad.innerText = `Cursor at ${e.offsetX, e.offsetY}`
-    })
+    let pad = document.getElementById("pad");
+    pad.style.border = "1px solid black";
+    pad.style.width = "10rem";
+    pad.style.padding = "1rem";
+    pad.addEventListener("mousemove", (e) => {
+      pad.innerText = `Cursor at ${(e.offsetX, e.offsetY)}`;
+    });
 
     // mouseenter, mouseleave, mouseover, mouseout
 
-    let card = document.getElementById('card')
-    card.style.border = '1px solid black'
-    card.style.width = '10rem'
-    card.style.padding = '1rem'
+    let card = document.getElementById("card");
+    card.style.border = "1px solid black";
+    card.style.width = "10rem";
+    card.style.padding = "1rem";
 
-    card.addEventListener('mouseover',()=>{
-        card.innerText = 'Mouse entered'
-    })
+    card.addEventListener("mouseover", () => {
+      card.innerText = "Mouse entered";
+    });
 
-    card.addEventListener('mouseout',()=>{
-        card.innerText = 'Mouse left'
+    card.addEventListener("mouseout", () => {
+      card.innerText = "Mouse left";
+    });
+
+    // contextmenu
+
+    // document.querySelector('body').addEventListener('contextmenu',(e)=>{
+    //     e.preventDefault()
+    // })
+
+    // wheel
+    document.getElementById("scrollzone").addEventListener("wheel", (e) => {
+      console.log("Wheel delta:", e.deltaY); // positive = scrolling down
+    });
+
+    // keydown
+    document.querySelector('body').addEventListener("keydown", (e) => {
+      if (e.key === "Enter") {
+        // e.preventDefault(); // Prevents page reload or form submission
+        alert(`You're out since you pressed enter.`);
+      }
+    });
+
+    // keyup
+    document.querySelector('body').addEventListener('keyup',(e) =>{
+        if(e.key.toLowerCase() === 's'){
+            const h2 = document.createElement('h2')
+            const textIn = document.createTextNode(`You pressed and released ${e.key}`)
+            h2.appendChild(textIn)
+            document.body.appendChild(h2)
+        }
     })
-</script>
+  </script>
 </html>
