@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async Lec</title>
+</head>
+<body>
+    <h1>Chai aur code</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+    <button id="stop-se">Stop SetTimeout</button>
+</body>
+<script>
+    // setTimeout()
+    console.log('Timer started');
+    setTimeout(function(){
+        console.log("10 secomds passed");
+    },10000)
+
+    const changeH1 = () =>{
+        document.querySelector('h1').innerText = 'Hello Siddhesh'
+    }
+    let chngeTo = setTimeout(changeH1,4000)
+
+    //clearTimeout()
+    let buttonAccess = document.querySelector('#stop-se')
+    buttonAccess.addEventListener('click',() =>{
+        clearTimeout(chngeTo)
+        document.querySelector('h1').innerText = 'setTimeout() stopped'
+    })
+
+    //setInterval()
+    document.querySelector('#start').addEventListener('click',()=>{
+        const changeInto = setInterval(()=>{
+        const newElem = document.createElement('span')
+        const elemText = document.createTextNode('Hello from the browser')
+        newElem.appendChild(elemText)
+        document.body.appendChild(newElem)
+
+    // clearInterval()
+    document.querySelector('#stop').addEventListener('click',()=>{
+        clearInterval(changeInto)
+    })
+    },2000)
+    })
+
+
+
+</script>
+</html>
