@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BMI Calculator</title>
+    <script
+      src="https://kit.fontawesome.com/ee2093fa90.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Open Sans", sans-serif;
+    }
+    body {
+      width: 100%;
+      height: 100vh;
+      background: linear-gradient(
+        94deg,
+        rgba(110, 238, 135, 1) 0%,
+        rgb(95, 198, 47) 50%
+      );
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .container {
+      background-color: white;
+      width: 30rem;
+      height: 40rem;
+      border: none;
+      border-radius: 10px;
+      padding: 30px 35px;
+    }
+    h1 {
+      text-align: center;
+      color: black;
+      font-size: 1.8rem;
+    }
+    h1 span {
+      font-weight: normal;
+    }
+    .divider {
+      border: none;
+      border-top: 1px solid #e8e8e8;
+      margin: 20px 0;
+    }
+    .measurements-cont {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      font-size: 1.2rem;
+    }
+    .measurements-cont h4{
+        font-weight: normal;
+    }
+    .measurements-cont h4 span{
+        font-size: 0.9rem;
+    }
+    .measurements-cont input{
+        width: 8rem;
+        height: 2.5rem;
+        background-color: #f2f2f2;
+        border: 1px solid #e6e6e6;
+        display: inline-flex;
+        justify-content: center;
+        align-items: baseline;
+        padding: 14px 22px;
+        font-size: 1.2rem;
+    }
+    .result-section{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #e6e6e6;
+        width: 15rem;
+    }
+  </style>
+  <body>
+    <div class="container">
+      <h1>
+        Smart BMI <span>Calculator</span>
+        <i class="fa-solid fa-brain" style="color: #000000"></i>
+      </h1>
+      <hr class="divider" />
+      <div class="measurements-cont">
+        <h4>Height <span>(cm)</span></h4>
+        <input type="text" name="height" id="height" />
+      </div>
+      <hr class="divider" />
+      <div class="measurements-cont">
+        <h4>Weight <span>(kg)</span></h4>
+        <input type="text" name="weight" id="weight" />
+      </div>
+      <hr class="divider" />
+      <div class="result-section">hello</div>
+      <hr class="divider" />
+    </div>
+  </body>
+</html>
