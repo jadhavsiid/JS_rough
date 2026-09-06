@@ -20,26 +20,25 @@
     body {
       width: 100%;
       height: 100vh;
-      background: linear-gradient(
-        94deg,
-        rgba(110, 238, 135, 1) 0%,
-        rgb(95, 198, 47) 50%
-      );
+      background: #f64c18;
+      background: linear-gradient(179deg, #f64c18 0%, #010101 100%);
       display: flex;
       justify-content: center;
       align-items: center;
+      background-repeat: no-repeat;
+   
     }
     .container {
       background-color: white;
       width: 30rem;
-      height: 40rem;
+      height: 28rem;
       border: none;
       border-radius: 10px;
       padding: 30px 35px;
     }
     h1 {
       text-align: center;
-      color: black;
+      color: #000000;
       font-size: 1.8rem;
     }
     h1 span {
@@ -56,29 +55,74 @@
       align-items: center;
       font-size: 1.2rem;
     }
-    .measurements-cont h4{
-        font-weight: normal;
+    .measurements-cont h4 {
+      font-weight: normal;
+      font-weight: bold;
     }
-    .measurements-cont h4 span{
-        font-size: 0.9rem;
+    .measurements-cont h4 span {
+      font-size: 0.9rem;
     }
-    .measurements-cont input{
-        width: 8rem;
-        height: 2.5rem;
-        background-color: #f2f2f2;
-        border: 1px solid #e6e6e6;
-        display: inline-flex;
-        justify-content: center;
-        align-items: baseline;
-        padding: 14px 22px;
-        font-size: 1.2rem;
+    .measurements-cont input {
+      width: 8rem;
+      height: 2.5rem;
+      background-color: #f2f2f2;
+      border: 1px solid #e6e6e6;
+      display: inline-flex;
+      justify-content: center;
+      align-items: baseline;
+      padding: 14px 22px;
+      font-size: 1.2rem;
     }
-    .result-section{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: #e6e6e6;
-        width: 15rem;
+    .result {
+      display: none;
+    }
+    .result-section {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #e6e6e6;
+      width: 100%;
+      height: 5rem;
+    }
+    .features {
+      display: flex;
+      justify-content: space-evenly;
+    }
+    .feature {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 0 2rem;
+      justify-content: space-evenly;
+    }
+    .feature i {
+      font-size: 2rem;
+    }
+    #secure,
+    #fast {
+      border-right: 1px solid #e8e8e8;
+    }
+    .calculate-button {
+      display: flex;
+      justify-content: center;
+      margin: 2rem 0;
+    }
+    .btn {
+      padding: 0.8rem 8rem;
+      font-size: 1.4rem;
+      border: none;
+      border-radius: 10px;
+      background: #f64c18;
+      background: linear-gradient(
+        108deg,
+        #f64c18 0%,
+        #e62314 100%
+      );
+      font-weight: bold;
+      color: #ffffff;
+    }
+    .btn:hover{
+      cursor: pointer;
     }
   </style>
   <body>
@@ -98,8 +142,27 @@
         <input type="text" name="weight" id="weight" />
       </div>
       <hr class="divider" />
-      <div class="result-section">hello</div>
-      <hr class="divider" />
+      <div class="result">
+        <div class="result-section"></div>
+        <hr class="divider" />
+      </div>
+      <div class="features">
+        <div id="secure" class="feature">
+          <i class="fa-solid fa-shield-heart" style="color:#000000"></i>
+          <p>Secure</p>
+        </div>
+        <div id="fast" class="feature">
+          <i class="fa-solid fa-bolt" style="color: #000000"></i>
+          <p>Fast</p>
+        </div>
+        <div id="accurate" class="feature">
+          <i class="fa-solid fa-bullseye" style="color: #000000"></i>
+          <p>Accurate</p>
+        </div>
+      </div>
+      <div class="calculate-button">
+        <button class="btn">Calculate</button>
+      </div>
     </div>
   </body>
 </html>
